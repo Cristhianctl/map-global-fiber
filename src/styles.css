@@ -1,0 +1,36 @@
+.loading-map{
+  position: relative;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+.map-div{
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.search-container{
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  left: 20px;
+  padding: 5px;
+  position: fixed;
+  top: 20px;
+  width: 250px;
+  z-index: 999;
+}
+p{
+  font-size: 12px;
+}
+
+.pointer{
+  cursor: pointer;
+}
