@@ -17,7 +17,6 @@ export const BtnMyLocation = () => {
 
   }
 
-
   return (
     <button
       onClick={onClick} 

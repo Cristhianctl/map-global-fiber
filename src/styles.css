@@ -1,3 +1,7 @@
+*{
+  font-family: 'Inter', sans-serif;
+}
+
 .loading-map{
   position: relative;
   top: 0;
@@ -33,4 +37,52 @@ p{
 
 .pointer{
   cursor: pointer;
+}
+
+/*Stylos de leyenda*/
+
+.content-leyenda{
+  background-color: #f3f4f7;
+  border-radius: 10px;
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.titulo{
+  font-size: 22px;
+  border-bottom: 2px solid #000;
+  margin-bottom: 10px;
+}
+
+.content-desc{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 130px ;
+  margin-bottom: 8px;
+}
+
+.content-desc p{
+  margin: 0 5px 0 0;
+  font-size: 15px;
+  color: #000;
+}
+
+.content-leyenda .cuadrado{
+  background-color: rgba(27, 47, 238, 0.7);
+  width: 20px;
+  height: 20px;
+}
+
+.contact-agente{
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  background-color: #0D6EFD;
+  color: white;
+  padding: 10px;
+  margin-bottom: 5px;
 }

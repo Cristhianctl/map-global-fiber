@@ -1,5 +1,7 @@
+/* eslint import/no-webpack-loader-syntax: off */
 import  { useReducer, useContext, useEffect } from 'react';
-import { Map, Marker, Popup } from "mapbox-gl";
+//@ts-ignore
+import { Map, Marker, Popup } from "!mapbox-gl";
 import { MapContext } from "./MapContext";
 import { mapReducer } from "./mapReducer";
 import { PlacesContext } from '../places/PlacesContext';
@@ -24,28 +26,28 @@ export const MapProvider = ({children}: Props) => {
 
   const [state, dispatch] = useReducer(mapReducer, INITIAL_STATE);
   const {places} = useContext(PlacesContext);
-
+  
   useEffect(() => {
     state.markers.forEach(marker => marker.remove());
     const newMarkers: Marker [] = [];
-
+    
     for (const place of places){
       const [ lng, lat ] = place.center;
       const popup = new Popup()
-        .setHTML(`
-          <h6>${place.text_es}</h6>
-          <p>${place.place_name_es}</p>
-        `);
+      .setHTML(`
+      <h6>${place.text_es}</h6>
+      <p>${place.place_name_es}</p>
+      `);
       
-        const newMarker = new Marker()
-          .setPopup(popup)
-          .setLngLat([lng, lat])
-          .addTo(state.map!)
-
+      const newMarker = new Marker()
+      .setPopup(popup)
+      .setLngLat([lng, lat])
+      .addTo(state.map!)
+      
       newMarkers.push( newMarker);
     }
     //ToDo: Limpiar polyline
-
+    
     dispatch({type: 'setMarkers', payload: newMarkers});
 
   }, [places])
@@ -54,8 +56,7 @@ export const MapProvider = ({children}: Props) => {
   const setMap = (map: Map) =>{
 
     const myLocationPopup = new Popup().setHTML(`
-      <h4>Aqui te Encuetras</h4>
-      <p>Te estoy viendo perro infiel</p>
+      <h4>Ubicacion Actual</h4>
     `);
 
     new Marker({
