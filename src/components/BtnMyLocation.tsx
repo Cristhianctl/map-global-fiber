@@ -18,17 +18,8 @@ export const BtnMyLocation = () => {
   }
 
   return (
-    <button
-      onClick={onClick} 
-      className="btn btn-primary"
-      style={{
-        position: 'fixed',
-        top: '20px',
-        right: '20px',
-        zIndex: '999',
-      }}
-    >
-      Mi Ubicacion
+    <button onClick={onClick} className="btn-ubicacion">
+      Mi Ubicación
     </button>
   )
 }

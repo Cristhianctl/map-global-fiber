@@ -41,48 +41,94 @@ p{
 
 /*Stylos de leyenda*/
 
+.btn-ubicacion{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #003dff;
+  width: 150px;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+ 
+  @media screen and (max-width: 450px){
+    top: auto;
+    bottom: 240px;
+  }
+}
+
 .content-leyenda{
   background-color: #f3f4f7;
-  border-radius: 10px;
+  width: 150px;
   position: fixed;
-  top: 60px;
+  top: 65px;
   right: 20px;
   text-align: center;
   padding: 10px;
+  border: 3px solid #003dff;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  @media screen and (max-width: 450px){
+    top: auto;
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .img-logo{
+    left: 20px;
+  }
 }
 
 .titulo{
-  font-size: 22px;
-  border-bottom: 2px solid #000;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .content-desc{
-  display: flex;
+  background-color: #fff;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: block;
+  justify-content: center;
   align-items: center;
   text-align: center;
   width: 130px ;
-  margin-bottom: 8px;
+  padding: 2px;
+}
+
+.content-desc h6{
+  font-size: 15px;
+  color: #1c6ee9;
+  margin: 0;
 }
 
 .content-desc p{
-  margin: 0 5px 0 0;
-  font-size: 15px;
+  font-size: 12px;
   color: #000;
+  margin: 0;
 }
 
 .content-leyenda .cuadrado{
-  background-color: rgba(27, 47, 238, 0.7);
-  width: 20px;
-  height: 20px;
+  width: 100px;
+  height: 80px;
+  @media screen and (max-width: 450px){
+    width: 80px;
+    height: 60px;
+  }
 }
 
 .contact-agente{
   border: none;
   border-radius: 5px;
   font-size: 13px;
-  background-color: #0D6EFD;
+  background-color: #383838;
   color: white;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 5px;
+  width: 100px;
 }
